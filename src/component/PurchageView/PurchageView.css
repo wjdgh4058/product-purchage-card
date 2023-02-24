@@ -10,6 +10,7 @@
   gap: 16px;
 }
 
+/* 제품 정보 */
 .productImg {
   box-sizing: border-box;
   border: 1px solid #dee0e3;
@@ -36,6 +37,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .productPrice__discountRate {
@@ -82,4 +84,74 @@
   letter-spacing: -0.005em;
 
   color: #333333;
+}
+
+/* 택배 정보 */
+
+.deliveryInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.deliveryInfo__delivery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.deliveryInfo__delivery__shipping {
+  /* 택배배송 */
+
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #333333;
+  margin-right: 2px;
+}
+
+.deliveryInfo__delivery__priceInfo {
+  /* 택배가격 */
+}
+
+.deliveryInfo__delivery__priceInfo__price {
+  /* 3,000원 */
+
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+
+  color: #333333;
+}
+
+.deliveryInfo__delivery__priceInfo__payment {
+  /* (주문시 결제) */
+
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+
+  color: #6b90dc;
+}
+
+.deliveryInfo__method {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+
+  letter-spacing: -0.005em;
+
+  /* color-gray/300 */
+
+  color: #999999;
+  margin: 0;
 }
