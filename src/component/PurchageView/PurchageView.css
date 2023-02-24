@@ -1,0 +1,28 @@
+.pulchageView {
+  width: 360px;
+  height: 568px;
+  background-color: yellow;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+}
+
+.productImg {
+  border: 1px solid #dee0e3;
+}
+
+.productname {
+  /* Heading / 100 */
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: #333333;
+}
