@@ -21,13 +21,14 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: 46px;
+  /* height: 46px; */
   font-family: "Spoqa Han Sans Neo";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
   color: #333333;
+  margin: 0;
 }
 
 .productPrice {
@@ -64,12 +65,9 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
-  /* identical to box height, or 16px */
 
   letter-spacing: -0.005em;
   text-decoration-line: line-through;
-
-  /* color-gray/300 */
 
   color: #999999;
 }
@@ -80,11 +78,8 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 100%;
-  /* identical to box height, or 22px */
 
   letter-spacing: -0.005em;
-
-  /* color-gray/400 */
 
   color: #333333;
 }

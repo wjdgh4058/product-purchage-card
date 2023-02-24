@@ -9,7 +9,9 @@ const productInfo = {
   discountRate: 88,
   fixedPrice: 56760,
   price: 6370,
-  DeliveryFee: 3000,
+  deliveryFee: 3000,
+  deliveryCount: 10,
+  deliveryMethod: "주문시 결제",
 };
 
 function App() {
