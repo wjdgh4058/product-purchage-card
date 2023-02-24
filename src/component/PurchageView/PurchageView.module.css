@@ -1,0 +1,9 @@
+.pulchageView {
+  width: 360px;
+  height: 568px;
+  background-color: aqua;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
