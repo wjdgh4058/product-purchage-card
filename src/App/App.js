@@ -12,6 +12,7 @@ const productInfo = {
   deliveryFee: 3000,
   deliveryCount: 10,
   deliveryMethod: "주문시 결제",
+  maxAmount: 10,
 };
 
 function App() {
