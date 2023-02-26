@@ -17,6 +17,10 @@ body {
 }
 
 .pulchageView {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 360px;
   height: 568px;
   background-color: yellow;
@@ -132,6 +136,20 @@ body {
   margin-right: 2px;
 }
 
+.deliveryInfo__delivery__shipping::after {
+  content: "";
+  /* Line */
+
+  /* width: 14px;
+  height: 0px; */
+
+  /* color-gray/200 */
+
+  margin-left: 7px;
+  border: 0.9px solid #dee0e3;
+  transform: rotate(90deg);
+}
+
 /* .deliveryInfo__delivery__priceInfo {
    택배가격
 } */
@@ -213,4 +231,236 @@ body {
   /* color-gray/400 */
 
   color: #333333;
+}
+
+/* 상품 구매 정보 */
+.productPrice {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.productPrice__textInfo {
+  /* 상품 금액 정보 */
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+
+  width: 89px;
+  height: 16px;
+}
+
+.productPrice__textInfo__totalPrice {
+  /* 총 상품 금액 */
+
+  width: 71px;
+  height: 14px;
+
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+
+  letter-spacing: -0.005em;
+
+  /* color-gray/400 */
+
+  color: #333333;
+}
+
+.productPrice__textInfo__helfBtn {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 7px;
+  /* gap: 10px; */
+
+  /* color-white */
+
+  background: #ffffff;
+  /* color-gray/200 */
+
+  border: 1px solid #dee0e3;
+}
+
+.productPrice__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+  /* width: 156px;
+  height: 22px; */
+}
+
+.productPrice__info__amount {
+  /* 총 수량 1개 */
+
+  /* width: 66px;
+height: 14px; */
+
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+
+  text-align: right;
+  letter-spacing: -0.005em;
+
+  /* color-gray/300 */
+
+  color: #999999;
+}
+.productPrice__info__amount::after {
+  content: "";
+  /* Line */
+
+  /* width: 14px;
+  height: 0px; */
+
+  /* color-gray/200 */
+
+  margin-left: 7px;
+  border: 0.9px solid #dee0e3;
+  transform: rotate(90deg);
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.productPrice__info__price {
+  /* 6,370원 */
+
+  /* width: 78px;
+height: 22px; */
+
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  /* identical to box height, or 22px */
+
+  letter-spacing: -0.005em;
+
+  /* color-secondary */
+
+  color: #6b90dc;
+}
+
+/* 도움말 버튼 툴팁 */
+/* .productPriceTooltip {
+  background-color: white;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  width: 296px;
+  height: 76px;
+  letter-spacing: -0.25px;
+  margin-top: 6.8px;
+  padding: 5px 36.5px 5px 11px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #dee0e3;
+}
+
+.productPriceTooltip::after {
+  border: 1px solid #dee0e3;
+  border-bottom: 8px solid #dee0e3;
+  border-left: 7px solid white;
+  border-right: 7px solid white;
+  content: "";
+  position: absolute;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: 0;
+  width: 0;
+}
+
+.productPriceTooltip button {
+  position: absolute;
+  left: 95%;
+  top: 20%;
+  transform: translate(-100%);
+  background-color: inherit;
+  cursor: pointer;
+  border: 0;
+} */
+
+.productPriceTooltip {
+  position: absolute;
+  bottom: -95px;
+  background-color: #ffffff;
+  border: 1px solid #dee0e3;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 296px;
+  height: 76px;
+  font-size: 12px;
+  padding: 16px;
+  font-weight: 400;
+  line-height: 50%;
+  z-index: 100;
+}
+.productPriceTooltip::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 70px;
+  border-color: #ffffff transparent;
+  border-style: solid;
+  border-width: 0 11px 16px 11px;
+  z-index: 1;
+}
+.productPriceTooltip::after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 70px;
+  border-color: #dee0e3 transparent;
+  border-style: solid;
+  border-width: 0 11px 17px 11px;
+  z-index: 0;
+}
+.productPriceTooltip p {
+  margin: 8px;
+}
+.productPriceTooltip p b {
+  color: #6b90dc;
+  font-weight: 400;
+}
+.productPriceTooltip button {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
 }

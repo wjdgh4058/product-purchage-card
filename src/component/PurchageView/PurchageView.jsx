@@ -1,6 +1,11 @@
 // PurchageView 기본 틀
 import "./PurchageView.css";
-import { Counter, DeliveryInfo, ProductInfo } from "./component/index";
+import {
+  Counter,
+  DeliveryInfo,
+  ProductInfo,
+  ProductPrice,
+} from "./component/index";
 import { useState } from "react";
 
 export function PurchageView(props) {
@@ -14,6 +19,7 @@ export function PurchageView(props) {
         count={count}
         setCount={setCount}
       ></Counter>
+      <ProductPrice product={props.productInfo} count={count}></ProductPrice>
     </div>
   );
 }
