@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+  color: #333333;
+  margin: 0 auto;
+}
+
 .pulchageView {
   width: 360px;
   height: 568px;
@@ -114,9 +132,9 @@
   margin-right: 2px;
 }
 
-.deliveryInfo__delivery__priceInfo {
-  /* 택배가격 */
-}
+/* .deliveryInfo__delivery__priceInfo {
+   택배가격
+} */
 
 .deliveryInfo__delivery__priceInfo__price {
   /* 3,000원 */
@@ -154,4 +172,45 @@
 
   color: #999999;
   margin: 0;
+}
+
+/* 수량 버튼 counter */
+
+.counter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border: 1px solid #dee0e3;
+  width: 110px;
+}
+
+.counter__minusBtn,
+.counter__plusBtn {
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f1f2f4;
+  border: 0;
+}
+
+.counter__output {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.005em;
+  flex-grow: 1;
+
+  /* color-gray/400 */
+
+  color: #333333;
 }
