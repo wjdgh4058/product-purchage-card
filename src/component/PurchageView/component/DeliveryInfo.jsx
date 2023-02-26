@@ -8,7 +8,11 @@ export function DeliveryInfo(props) {
         <span className="deliveryInfo__delivery__shipping">택배배송</span>
         <div className="deliveryInfo__delivery__priceInfo">
           <span className="deliveryInfo__delivery__priceInfo__price">
-            {poduct.deliveryFee ? poduct.deliveryFee + "원" : null}
+            {poduct.deliveryFee
+              ? poduct.deliveryFee
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원"
+              : null}
           </span>
           <span className="deliveryInfo__delivery__priceInfo__payment">
             {poduct.deliveryMethod ? "(" + poduct.deliveryMethod + ")" : null}

@@ -24,7 +24,10 @@ export function ProductPrice(props) {
           총 수량 {props.count}개
         </span>
         <span className="productPrice__info__price">
-          {props.product.price * props.count}원
+          {(props.product.price * props.count)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          원
         </span>
       </div>
     </div>

@@ -19,10 +19,15 @@ export function ProductInfo(props) {
         </span>
         <div className="productPrice__price">
           <span className="productPrice__price__before" aria-label="원가">
-            {product.fixedPrice ? product.fixedPrice + "원" : null}
+            {product.fixedPrice
+              ? product.fixedPrice
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원"
+              : null}
           </span>
           <span className="productPrice__price__after" aria-label="판매가">
-            {product.price + "원"}
+            {product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+              "원"}
           </span>
         </div>
       </div>
