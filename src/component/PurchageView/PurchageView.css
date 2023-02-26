@@ -21,7 +21,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 360px;
+  width: clamp(320px, 100vw, 800px);
   height: 568px;
   background-color: #ffff;
   display: flex;
@@ -52,6 +52,14 @@ body {
   line-height: 130%;
   color: #333333;
   margin: 0;
+}
+.productInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid #dee0e3;
+  padding-bottom: 16px;
 }
 
 .productPrice {
@@ -113,6 +121,9 @@ body {
 .deliveryInfo {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid #dee0e3;
+  padding-bottom: 16px;
 }
 
 .deliveryInfo__delivery {
@@ -174,6 +185,8 @@ body {
   font-size: 14px;
 
   color: #6b90dc;
+
+  margin-left: 5px;
 }
 
 .deliveryInfo__method {
@@ -193,6 +206,11 @@ body {
 }
 
 /* 수량 버튼 counter */
+.counter__line {
+  width: 100%;
+  border-bottom: 1px solid #dee0e3;
+  padding-bottom: 16px;
+}
 
 .counter {
   display: flex;
@@ -474,7 +492,8 @@ height: 22px; */
   padding: 10px 95px;
   gap: 10px;
 
-  width: 328px;
+  /* width: 328px; */
+  width: 100%;
   height: 48px;
 
   /* color-primary / 100 */

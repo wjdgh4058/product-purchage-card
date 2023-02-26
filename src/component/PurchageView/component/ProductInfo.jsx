@@ -3,7 +3,7 @@
 export function ProductInfo(props) {
   const product = props.product;
   return (
-    <>
+    <div className="productInfo">
       <img
         className="productImg"
         src={product.productImage}
@@ -31,6 +31,6 @@ export function ProductInfo(props) {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 }

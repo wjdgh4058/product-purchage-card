@@ -12,24 +12,26 @@ export function Counter(props) {
   };
 
   return (
-    <div className="counter">
-      <button
-        className="counter__minusBtn"
-        aria-label="상품 수량 감소"
-        onClick={minusBtn}
-      >
-        -
-      </button>
-      <output className="counter__output" aria-label="선택한 상품 수량">
-        {props.count}
-      </output>
-      <button
-        className="counter__plusBtn"
-        aria-label="상품 수량 증가"
-        onClick={plusBtn}
-      >
-        +
-      </button>
+    <div className="counter__line">
+      <div className="counter">
+        <button
+          className="counter__minusBtn"
+          aria-label="상품 수량 감소"
+          onClick={minusBtn}
+        >
+          -
+        </button>
+        <output className="counter__output" aria-label="선택한 상품 수량">
+          {props.count}
+        </output>
+        <button
+          className="counter__plusBtn"
+          aria-label="상품 수량 증가"
+          onClick={plusBtn}
+        >
+          +
+        </button>
+      </div>
     </div>
   );
 }
