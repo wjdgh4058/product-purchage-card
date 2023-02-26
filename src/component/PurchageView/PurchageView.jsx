@@ -5,6 +5,7 @@ import {
   DeliveryInfo,
   ProductInfo,
   ProductPrice,
+  PurchageButton,
 } from "./component/index";
 import { useState } from "react";
 
@@ -20,6 +21,7 @@ export function PurchageView(props) {
         setCount={setCount}
       ></Counter>
       <ProductPrice product={props.productInfo} count={count}></ProductPrice>
+      <PurchageButton count={count}></PurchageButton>
     </div>
   );
 }
